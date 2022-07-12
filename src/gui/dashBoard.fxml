@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckListView?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DashBoardController">
+   <children>
+      <AnchorPane fx:id="dashDoorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+         <children>
+            <Line endX="475.0" layoutX="500.0" layoutY="92.0" startX="-475.0" stroke="#02bc02" strokeWidth="2.0" />
+            <Label layoutX="279.0" layoutY="28.0" text="شاشة قاعدة بيانات إصلاح الأسلحة" textFill="GREEN">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="466.0" layoutX="975.0" layoutY="106.0" startX="-100.0" />
+            <JFXButton fx:id="unitsButton" layoutX="888.0" layoutY="130.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="الوحدات">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="weaponsButton" layoutX="888.0" layoutY="182.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="الأسلحة">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="repairButton" layoutX="888.0" layoutY="234.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="الصيانة">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="userButton" layoutX="888.0" layoutY="287.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="المسخدمون">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="formsButton" layoutX="888.0" layoutY="339.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="النماذج">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="reportsButton" layoutX="888.0" layoutY="392.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="التقارير">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="logoutButton" layoutX="888.0" layoutY="471.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="خروج">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutY="93.0" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane fx:id="imagePane" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <ImageView fitHeight="392.0" fitWidth="392.0" layoutX="307.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resources/Lo1443.sre" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="repairPane" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TextField fx:id="repairIDField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="487.0" layoutY="169.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" layoutX="755.0" layoutY="169.0" prefHeight="38.0" prefWidth="97.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="رقم امر العمل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="repairWeaponDField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="487.0" layoutY="225.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" layoutX="755.0" layoutY="225.0" prefHeight="38.0" prefWidth="97.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="رقم السلاح">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="repairInspectionFiled" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="487.0" layoutY="280.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" layoutX="755.0" layoutY="280.0" prefHeight="38.0" prefWidth="97.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="نوع التفتيش">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="755.0" layoutY="111.0" prefHeight="38.0" prefWidth="97.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="السلاح">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="755.0" layoutY="57.0" prefHeight="38.0" prefWidth="97.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="الوحدة">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="repairUnitNameCompo" layoutX="487.0" layoutY="57.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="262.0" promptText="غير محدد" style="-fx-background-color: #fff; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: green;" />
+                        <ComboBox fx:id="repairWeaponNameCompo" layoutX="487.0" layoutY="111.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="262.0" promptText="غير محدد" style="-fx-background-color: #fff; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: green;" />
+                        <JFXButton fx:id="saveRepairBtn" layoutX="487.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حفظ نموذج امر العمل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="repairSearchBtn" layoutX="671.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="بحث">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="repairUpdateBtn" layoutX="487.0" layoutY="387.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="تعديل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addRepairBtn" layoutX="671.0" layoutY="387.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="اضافة">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteRepairBtn" layoutX="27.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ff8080" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حذف" textFill="#ff2121">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="printRepair" layoutX="239.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="112.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="طباعة النموذج">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fx:id="repiarImageView" fitHeight="410.0" fitWidth="320.0" layoutX="27.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="repairImgPathLabel" layoutX="506.0" layoutY="27.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="10.0" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="unitsPane" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TableView fx:id="unitTable" layoutX="406.0" layoutY="58.0" onMouseClicked="#importUnitData" prefHeight="392.0" prefWidth="455.0">
+                          <columns>
+                            <TableColumn fx:id="unitNameColmn" prefWidth="75.0" text="اسم الوحدة" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TextField fx:id="unitNameField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="34.0" layoutY="96.0" onKeyPressed="#unitAddEnter" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton fx:id="addUnitBtn" layoutX="280.0" layoutY="410.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="اضافة">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteUnitBtn" layoutX="14.0" layoutY="410.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ff8080" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حذف" textFill="#ff2121">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="editUnitBtn" layoutX="165.0" layoutY="410.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="تعديل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="317.0" layoutY="96.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="الإسم">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="searchPane" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <JFXButton fx:id="searchDetailBtn" layoutX="671.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="التفاصيل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteRepairBtn_1" layoutX="27.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ff8080" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حذف" textFill="#ff2121">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="printRepair_1" layoutX="239.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="112.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="طباعة النموذج">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fx:id="repiarImageView_1" fitHeight="410.0" fitWidth="320.0" layoutX="27.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                        <TableView fx:id="searchTable" layoutX="364.0" layoutY="11.0" onMouseClicked="#importReportData" prefHeight="325.0" prefWidth="494.0">
+                          <columns>
+                            <TableColumn fx:id="inspectionColmun" prefWidth="75.0" text="نوع التفتيش" />
+                              <TableColumn fx:id="WeaponColmun" prefWidth="75.0" text="السلاح" />
+                              <TableColumn fx:id="UnitColmun" prefWidth="75.0" text="الوحدة" />
+                              <TableColumn fx:id="WeaponIDColmun" prefWidth="75.0" text="رقم السلاح" />
+                              <TableColumn fx:id="orderIDColmun" prefWidth="75.0" text="رقم أمر العمل" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <JFXButton fx:id="searchSearchBtn" layoutX="496.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="بحث">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="weaponsPane" onKeyPressed="#addWeaponKeyEnter" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TableView fx:id="weaponsTable" layoutX="406.0" layoutY="58.0" onMouseClicked="#importWeaponsData" prefHeight="392.0" prefWidth="455.0">
+                           <columns>
+                              <TableColumn fx:id="weaponCaliberColumn" prefWidth="75.0" text="العيار" />
+                              <TableColumn fx:id="weaponModelColumn" prefWidth="75.0" text="الصناعة" />
+                              <TableColumn fx:id="weaponLabelColumn" prefWidth="75.0" text="النوع" />
+                              <TableColumn fx:id="weaponNameColumn" prefWidth="75.0" text="الاسم" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TextField fx:id="weaponNameField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="34.0" layoutY="96.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton fx:id="addWeaponBtn" layoutX="280.0" layoutY="410.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="اضافة">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteWeaponBtn" layoutX="14.0" layoutY="410.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ff8080" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حذف" textFill="#ff2121">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="editWeaponBtn" layoutX="165.0" layoutY="410.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="تعديل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="317.0" layoutY="96.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="التسمية">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="316.0" layoutY="150.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="النوع">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="316.0" layoutY="204.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="الصناعة">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="316.0" layoutY="255.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="العيار">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="weaponLabelField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="33.0" layoutY="150.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="weaponModelField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="33.0" layoutY="204.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="weaponCaliberField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="33.0" layoutY="254.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="reportsPane" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <JFXButton fx:id="searchDetailBtn2" layoutX="671.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="التفاصيل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteRepairBtn_2" layoutX="27.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ff8080" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حذف" textFill="#ff2121">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="printRepair_2" layoutX="239.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="112.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="طباعة النموذج">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="searchTable2" layoutX="364.0" layoutY="11.0" onMouseClicked="#importReportData" prefHeight="325.0" prefWidth="494.0">
+                           <columns>
+                              <TableColumn fx:id="inspectionColmun2" prefWidth="75.0" text="نوع التفتيش" />
+                              <TableColumn fx:id="WeaponColmun2" prefWidth="75.0" text="السلاح" />
+                              <TableColumn fx:id="UnitColmun2" prefWidth="75.0" text="الوحدة" />
+                              <TableColumn fx:id="WeaponIDColmun2" prefWidth="75.0" text="رقم السلاح" />
+                              <TableColumn fx:id="orderIDColmun2" prefWidth="75.0" text="رقم أمر العمل" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <JFXButton fx:id="searchSearchBtn2" layoutX="496.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="بحث">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <CheckListView fx:id="unitListView" layoutX="27.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="189.0" prefWidth="248.0" />
+                        <CheckListView fx:id="weaponListView" layoutX="27.0" layoutY="210.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="189.0" prefWidth="248.0" />
+                        <JFXDatePicker fx:id="startDate" layoutX="666.0" layoutY="387.0" nodeOrientation="RIGHT_TO_LEFT" promptText="من تاريخ" />
+                        <JFXDatePicker fx:id="endDate" layoutX="440.0" layoutY="387.0" nodeOrientation="RIGHT_TO_LEFT" promptText="الى تاريخ" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="FormsPane" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <TextField fx:id="formNameField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="487.0" layoutY="57.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="formNumField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="487.0" layoutY="113.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" layoutX="755.0" layoutY="111.0" prefHeight="38.0" prefWidth="97.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="الرقم">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="755.0" layoutY="57.0" prefHeight="38.0" prefWidth="97.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="اسم النموذج">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="saveFormBtn" layoutX="487.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حفظ النموذج">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="formSearchBtn" layoutX="671.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="بحث">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="formUpdateBtn" layoutX="487.0" layoutY="387.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="تعديل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addFormBtn" layoutX="671.0" layoutY="387.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="اضافة">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteFormBtn" layoutX="27.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ff8080" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حذف" textFill="#ff2121">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="printFormBtn" layoutX="239.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="112.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="طباعة النموذج">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fx:id="formImg" fitHeight="410.0" fitWidth="320.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="formImgPathLabel" layoutX="400.0" layoutY="202.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="50.0" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="userPane" prefHeight="507.0" prefWidth="875.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <JFXButton fx:id="deleteUser" layoutX="27.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ff8080" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="حذف" textFill="#ff2121">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="searchUser" layoutX="496.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="بحث">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addUser" layoutX="674.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="اضافة">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <TextField fx:id="userNameField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="476.0" layoutY="40.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" layoutX="751.0" layoutY="40.0" prefHeight="38.0" prefWidth="110.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="اسم المستخدم">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="userPassField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="476.0" layoutY="99.0" prefHeight="38.0" prefWidth="262.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" layoutX="751.0" layoutY="99.0" prefHeight="38.0" prefWidth="110.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="كلمة المرور">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="editeCheckBox" layoutX="746.0" layoutY="260.0" nodeOrientation="RIGHT_TO_LEFT" text="التعديل">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="printCheckBox" layoutX="745.0" layoutY="228.0" nodeOrientation="RIGHT_TO_LEFT" text="الطباعة">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="userCheckBox" layoutX="650.0" layoutY="358.0" nodeOrientation="RIGHT_TO_LEFT" text="الوصول للمستخدمين">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="addCheckBox" layoutX="745.0" layoutY="292.0" nodeOrientation="RIGHT_TO_LEFT" text="الإضافة">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="deleteCheckBox" layoutX="752.0" layoutY="325.0" nodeOrientation="RIGHT_TO_LEFT" text="الحذف">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <Label alignment="CENTER" layoutX="751.0" layoutY="169.0" prefHeight="38.0" prefWidth="110.0" style="-fx-border-color: green; -fx-border-radius: 15px;" text="الصلاحيات">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="updateUserBtn" layoutX="320.0" layoutY="446.0" onAction="#btnAction" prefHeight="40.0" prefWidth="160.0" ripplerFill="#008d00" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" text="تعديل">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginPane" onKeyPressed="#loginKeyEnter" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+         <children>
+            <Line endX="100.0" endY="335.0" layoutX="433.0" layoutY="205.0" startX="100.0" startY="-145.0" />
+            <ImageView fitHeight="392.0" fitWidth="392.0" layoutX="562.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Lo1443.sre" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="872.0" layoutY="452.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: green; -fx-border-radius: 5px;" text="التاريخ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="872.0" layoutY="503.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: green; -fx-border-radius: 5px;" text="الوقت">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="102.0" layoutY="233.0" prefHeight="47.0" prefWidth="349.0" style="-fx-border-color: green; -fx-border-radius: 5px;" text="قاعدة بيانات إصلاح الأسلحة">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="79.0" layoutY="80.0" styleClass="headerLabel" text="مجموعة لواء الإمام فيصل بن تركي الاول">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="105.0" layoutY="116.0" prefHeight="31.0" prefWidth="342.0" styleClass="headerLabel" text="سرية الصيانة">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="326.0" layoutY="336.0" prefHeight="31.0" text="اسم المستخدم">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="354.0" layoutY="391.0" prefHeight="31.0" text="كلمة المرور">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="uNameField" alignment="CENTER_RIGHT" focusColor="GREEN" layoutX="100.0" layoutY="329.0" prefHeight="45.0" prefWidth="212.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" layoutX="326.0" layoutY="471.0" onAction="#btnAction" prefHeight="38.0" prefWidth="125.0" style="-fx-border-color: green; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="دخول" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="471.0" onAction="#btnAction" prefHeight="38.0" prefWidth="125.0" style="-fx-border-color: green; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="مغادرة" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="uPassField" alignment="CENTER_RIGHT" focusColor="GREEN" layoutX="100.0" layoutY="384.0" prefHeight="45.0" prefWidth="212.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXPasswordField>
+            <Label alignment="CENTER" layoutX="105.0" layoutY="555.0" prefHeight="31.0" prefWidth="342.0" text="جميع حقوق البرنامج محفوظة" textFill="#f52525">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabel" alignment="CENTER_RIGHT" layoutX="645.0" layoutY="452.0" prefHeight="38.0" prefWidth="212.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" alignment="CENTER_RIGHT" layoutX="645.0" layoutY="503.0" prefHeight="38.0" prefWidth="212.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

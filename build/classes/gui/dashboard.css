@@ -1,0 +1,84 @@
+.mainFxmlClass {
+    -fx-background-color: #ffffff;
+}
+.headerLabel{
+    -fx-font-family: 'SC_AMEEN';
+    -fx-font-size: 40px;
+    -fx-fill: #000000
+}
+.headerLabel2{
+    -fx-font-family: 'Janna LT';
+    -fx-font-size: 25px;
+    -fx-fill: #000000
+}
+.singinBtn{
+    -fx-background-color: #379F4D
+}
+.closeBtn{
+    -fx-background-color: #FF2828;
+    -fx-background-radius: 0px
+}
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color:   #41BC59; 
+}
+.table-view .column-header .label{
+   -fx-text-fill: white;
+   -fx-font-weight: bold; 
+   -fx-alignment: CENTER;
+}
+
+.table-view .cell{
+   -fx-cell-size: 35;
+  -fx-alignment: center;
+  -fx-background-color: #FBFBFB;
+  -fx-border-color: #fff;
+  -fx-text-fill: black;
+  -fx-alignment: CENTER;
+  -fx-width: max
+}
+
+.table-row-cell:selected .cell{
+   -fx-background-color: #9BDDA8; 
+   -fx-text-fill: #000;
+}
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color:derive( #41BC59,80%);
+
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #41BC59,50%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+.greenBtn{
+    -fx-background-color: #379F4D;
+    -fx-text-fill: #fff
+}
+.redBtn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #FF2828;
+    -fx-border-color: #FF2828
+}
