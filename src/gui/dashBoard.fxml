@@ -493,7 +493,7 @@
                   <Font name="System Bold" size="28.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="79.0" layoutY="80.0" styleClass="headerLabel" text="مجموعة لواء الإمام فيصل بن تركي الاول">
+            <Label alignment="CENTER" layoutX="79.0" layoutY="80.0" styleClass="headerLabel" text="مجموعة لواء ******************* الاول">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
